@@ -1,0 +1,16 @@
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\bin\Debug\net5.0\Kernel.exe
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\bin\Debug\net5.0\Kernel.deps.json
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\bin\Debug\net5.0\Kernel.runtimeconfig.json
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\bin\Debug\net5.0\Kernel.runtimeconfig.dev.json
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\bin\Debug\net5.0\Kernel.dll
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\bin\Debug\net5.0\ref\Kernel.dll
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\bin\Debug\net5.0\Kernel.pdb
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.csprojAssemblyReference.cache
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.AssemblyInfoInputs.cache
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.AssemblyInfo.cs
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.csproj.CoreCompileInputs.cache
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.dll
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\ref\Kernel.dll
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.pdb
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.genruntimeconfig.cache

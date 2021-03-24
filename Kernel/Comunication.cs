@@ -11,6 +11,7 @@ namespace Kernel
          * File sistem port: 8082 
          * GUI port: 8081
          * Kernel port: 8080
+         * APP port: 8083
          * 
          */
 
@@ -81,7 +82,7 @@ namespace Kernel
 
             IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
             IPAddress ipAddress = ipHostInfo.AddressList[0];
-            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 8080);
+            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, port);
 
             Socket listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 

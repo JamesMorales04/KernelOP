@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LXWW2XvM3fTezYaH+IkzQJFX+pTYfRabFDa3Z9X0EVLBfO9BPOzjA6bCakEVy70orlOeg7jHCdn6YCM52kN3rg==",
+  "dgSpecHash": "xeiMbI7bpJW/A4fI7HftzU/gKiGNOMRcaAbte/KtpmLR2pmlkhO8JXgP3ltBb4K3wpZvFR14OfSWdHUel9dNmg==",
   "success": true,
   "projectFilePath": "C:\\Users\\james\\OneDrive\\Escritorio\\Kernel\\Kernel\\Kernel.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\james\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -10,7 +10,7 @@ namespace Kernel
          * File sistem port: 8082 
          * GUI port: 8081
          * Kernel port: 8080
-         * 
+         * APP port: 8083
          */
     class Messages
     {
@@ -47,16 +47,43 @@ namespace Kernel
             {
                 case "GUI":
                     comunication.sendMessage(rawMsg, 8081);
+                    comunication.sendMessage(rawMsg, 8082);
                     break;
                 case "GestorArc":
                     comunication.sendMessage(rawMsg, 8082);
                     break;
                 case "kernel":
-                    //comunication.sendMessage(rawMsg, 8082);
-                    core.stopKernel();
+
+                    if (msgClean[0].Split(':')[1] == "start" && msgClean[1].Split(':')[1] == "GUI")
+                    {
+                        comunication.sendMessage(rawMsg, 8082);
+                        string msg = core.startApp();
+
+                        comunication.sendMessage(msg, 8081);
+                        comunication.sendMessage(msg, 8082);
+
+
+
+                    }
+                    else if (msgClean[0].Split(':')[1] == "stop" && msgClean[1].Split(':')[1] == "GUI")
+                    {
+                        comunication.sendMessage("{cmd:stop, src:kernel, dst:APP, msg:\"Stop System\"", 8083);
+                        comunication.sendMessage(rawMsg, 8082);
+
+                        string msg = core.stoptApp();
+
+                        comunication.sendMessage(msg, 8081);
+                        comunication.sendMessage(msg, 8082);
+                    }
+                    else
+                    {
+                        comunication.sendMessage(rawMsg, 8082);
+                        core.stopKernel(comunication);
+                    }
                     break;
                 case "APP":
                     comunication.sendMessage(rawMsg, 8083);
+                    comunication.sendMessage(rawMsg, 8082);
                     break;
                 default:
                     break;
@@ -70,10 +97,8 @@ namespace Kernel
                 case "OK":
                     break;
                 case "0":
-
                     break;
                 case "Err":
-
                     break;
                 default:
                     break;

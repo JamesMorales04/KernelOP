@@ -14,3 +14,5 @@ C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.dll
 C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\ref\Kernel.dll
 C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.pdb
 C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.genruntimeconfig.cache
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\james\OneDrive\Escritorio\Kernel\Kernel\obj\Debug\net5.0\Kernel.csproj.CopyComplete

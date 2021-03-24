@@ -48,9 +48,7 @@ namespace Kernel
             switch (msgClean[2].Split(':')[1])
             {
                 case "GUI":
-                    Console.WriteLine("HOLA BB1");
                     comunication.sendMessage(rawMsg, 8081);
-                    Console.WriteLine("HOLA BB");
                     comunication.sendMessage(rawMsg, 8082);
                     break;
                 case "GestorArc":
@@ -98,9 +96,7 @@ namespace Kernel
                     }
                     break;
                 case "APP":
-                    Console.WriteLine("HOLA ASDASD");
-                    comunication.sendMessage(rawMsg, 8081);
-                    Console.WriteLine("HOLA ASDASDASDASDASD");
+                    comunication.sendMessage(rawMsg, 8083);
                     comunication.sendMessage(rawMsg, 8082);
                     break;
                 default:

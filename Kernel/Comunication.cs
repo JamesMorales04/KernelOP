@@ -24,7 +24,7 @@ namespace Kernel
             byte[] msgAux = Encoding.ASCII.GetBytes(msg);
             StartClient(msgAux, port);
 
-            Console.WriteLine(data);
+            Console.WriteLine("Mensaje saliente: " + msg);
         }
 
 
@@ -109,7 +109,7 @@ namespace Kernel
 
                     messages.Actions(data);
 
-                    byte[] msg = Encoding.ASCII.GetBytes(data);
+                    byte[] msg = Encoding.ASCII.GetBytes("");
 
                     handler.Send(msg);
                     handler.Shutdown(SocketShutdown.Both);

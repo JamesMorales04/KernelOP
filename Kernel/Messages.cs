@@ -27,8 +27,10 @@ namespace Kernel
 
         public void Actions(string msg)
         {
+            msg = msg.Replace("<EOF>", "");
+            Console.WriteLine("Mensaje entrante" + msg);
+            string[] msgClean = msg.Replace("{", "").Replace("}", "").Split(',');
 
-            string[] msgClean = msg.Replace("<EOF>", "").Replace("{", "").Replace("}", "").Split(',');
 
             if (msgClean.Length > 2)
             {
@@ -46,7 +48,9 @@ namespace Kernel
             switch (msgClean[2].Split(':')[1])
             {
                 case "GUI":
+                    Console.WriteLine("HOLA BB1");
                     comunication.sendMessage(rawMsg, 8081);
+                    Console.WriteLine("HOLA BB");
                     comunication.sendMessage(rawMsg, 8082);
                     break;
                 case "GestorArc":
@@ -67,13 +71,25 @@ namespace Kernel
                     }
                     else if (msgClean[0].Split(':')[1] == "stop" && msgClean[1].Split(':')[1] == "GUI")
                     {
-                        comunication.sendMessage("{cmd:stop, src:kernel, dst:APP, msg:\"Stop System\"", 8083);
+
                         comunication.sendMessage(rawMsg, 8082);
+                        if (core.isAppRunnig())
+                        {
+                            Console.WriteLine("aaaaaaaaaaaaa2");
+                            comunication.sendMessage("{cmd:stop,src:kernel,dst:APP,msg:\"Stop System\"}", 8083);
 
-                        string msg = core.stoptApp();
 
-                        comunication.sendMessage(msg, 8081);
-                        comunication.sendMessage(msg, 8082);
+                            string msg = core.stoptApp();
+                            comunication.sendMessage(msg, 8081);
+                            comunication.sendMessage(msg, 8082);
+                        }
+                        else
+                        {
+                            comunication.sendMessage("{cmd:send,src:kernel,dst:GUI,msg:\"Error->App not running\"}", 8081);
+                            comunication.sendMessage("{cmd:send,src:kernel,dst:GUI,msg:\"Error->App not running\"}", 8082);
+                        }
+
+
                     }
                     else
                     {
@@ -82,7 +98,9 @@ namespace Kernel
                     }
                     break;
                 case "APP":
-                    comunication.sendMessage(rawMsg, 8083);
+                    Console.WriteLine("HOLA ASDASD");
+                    comunication.sendMessage(rawMsg, 8081);
+                    Console.WriteLine("HOLA ASDASDASDASDASD");
                     comunication.sendMessage(rawMsg, 8082);
                     break;
                 default:
